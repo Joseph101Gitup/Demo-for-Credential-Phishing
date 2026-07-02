@@ -1,0 +1,304 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ===== Page Wrapper ===== */
+.page-wrapper {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===== Header ===== */
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0 30px;
+}
+
+#college-name {
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    background: linear-gradient(135deg, #1a6b2a, #1976d2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== Login Card ===== */
+.login-card {
+    width: 100%;
+    max-width: 560px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* ===== Logo Container ===== */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px 20px;
+}
+
+.logo-img {
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ===== Form Section ===== */
+.form-section {
+    padding: 10px 50px 50px;
+    border-left: 3px solid #e0e0e0;
+    border-right: 3px solid #e0e0e0;
+    margin: 0 30px;
+}
+
+.form-title {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+/* ===== Input Fields ===== */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    border: 1.5px solid #d0d0d0;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.input-group input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15);
+}
+
+/* ===== Sign In Button ===== */
+.signin-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #ffffff;
+    background: linear-gradient(180deg, #5cb85c, #4caf50);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.25s ease;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
+.signin-btn:hover {
+    background: linear-gradient(180deg, #4caf50, #43a047);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.35);
+}
+
+.signin-btn:active {
+    transform: scale(0.98);
+}
+
+/* ===== Data Page ===== */
+.data-section {
+    padding: 35px 40px 40px;
+}
+
+.data-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.data-subtitle {
+    font-size: 0.92rem;
+    color: #777;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+}
+
+.data-table th {
+    background: linear-gradient(135deg, #1a6b2a, #1976d2);
+    color: #fff;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.data-table th:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+.data-table th:last-child {
+    border-radius: 0 6px 0 0;
+}
+
+.data-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #e8e8e8;
+    color: #333;
+    word-break: break-all;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f7faf7;
+}
+
+.data-table tbody tr:hover {
+    background-color: #e8f5e9;
+    transition: background-color 0.2s ease;
+}
+
+.empty-msg {
+    text-align: center;
+    color: #999;
+    font-size: 1rem;
+    padding: 30px 0;
+    font-style: italic;
+}
+
+.data-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 11px 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #1976d2;
+    background: #e3f2fd;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background: #bbdefb;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+}
+
+.btn-clear {
+    padding: 11px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(180deg, #ef5350, #e53935);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.1s ease;
+}
+
+.btn-clear:hover {
+    background: linear-gradient(180deg, #e53935, #d32f2f);
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.35);
+}
+
+.btn-clear:active {
+    transform: scale(0.97);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .page-wrapper {
+        padding: 10px;
+    }
+
+    #college-name {
+        font-size: 1.15rem;
+        letter-spacing: 1px;
+    }
+
+    .form-section {
+        padding: 10px 25px 40px;
+        margin: 0 15px;
+    }
+
+    .form-title {
+        font-size: 1.1rem;
+    }
+
+    .logo-img {
+        max-width: 180px;
+    }
+
+    .data-section {
+        padding: 20px 16px 30px;
+    }
+
+    .data-table {
+        font-size: 0.82rem;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 8px;
+    }
+
+    .data-actions {
+        flex-direction: column;
+    }
+
+    .btn-back,
+    .btn-clear {
+        width: 100%;
+        text-align: center;
+    }
+}
