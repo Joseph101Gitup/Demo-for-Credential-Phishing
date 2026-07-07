@@ -70,7 +70,7 @@
                 row.innerHTML =
                     '<td>' + (index + 1) + '</td>' +
                     '<td>' + escapeHtml(entry.username) + '</td>' +
-                    '<td>' + escapeHtml(entry.passwordStatus || 'Not stored') + '</td>' +
+                    '<td>' + escapeHtml(entry.passwordStatus) + '</td>' +
                     '<td>' + escapeHtml(entry.timestamp) + '</td>';
                 tbody.appendChild(row);
             });
